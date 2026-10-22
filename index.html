@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Paarth Maisuria | Portfolio</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--accent:#6c5ce7;
+--accent2:#00b894;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+
+background:linear-gradient(
+270deg,
+#a1c4fd,
+#c2e9fb,
+#ffd3a5,
+#fdbb2d,
+#a1c4fd
+);
+
+background-size:600% 600%;
+animation:gradientShift 15s ease infinite;
+overflow-x:hidden;
+}
+
+@keyframes gradientShift{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.blob{
+position:fixed;
+border-radius:50%;
+filter:blur(60px);
+opacity:0.3;
+z-index:0;
+animation:float 8s ease-in-out infinite;
+}
+
+.blob1{
+width:300px;
+height:300px;
+background:#fd79a8;
+top:-50px;
+left:-50px;
+}
+
+.blob2{
+width:250px;
+height:250px;
+background:#ffeaa7;
+bottom:-30px;
+right:-30px;
+animation-delay:2s;
+}
+
+.blob3{
+width:200px;
+height:200px;
+background:#74b9ff;
+top:40%;
+left:55%;
+animation-delay:4s;
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0) scale(1);
+}
+50%{
+transform:translateY(-30px) scale(1.1);
+}
+}
+
+.card{
+position:relative;
+z-index:1;
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.2);
+border-radius:30px;
+padding:50px;
+max-width:900px;
+width:100%;
+text-align:center;
+box-shadow:0 20px 60px rgba(0,0,0,0.20);
+}
+
+.avatar-container{
+width:160px;
+height:160px;
+margin:0 auto 25px;
+border-radius:50%;
+overflow:hidden;
+border:4px solid rgba(255,255,255,0.8);
+box-shadow:0 10px 30px rgba(108,92,231,0.4);
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,var(--accent),var(--accent2));
+color:white;
+font-size:3rem;
+font-weight:800;
+}
+
+.avatar{
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:center 15%;
+transform:scale(1.3);
+transform-origin:center 20%;
+display:block;
+}
+
+h1{
+font-size:2.7rem;
+font-weight:800;
+
+background:linear-gradient(
+135deg,
+var(--accent),
+var(--accent2)
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.tagline{
+margin:10px 0;
+font-size:1.1rem;
+font-weight:500;
+color:#333;
+}
+
+.about{
+max-width:700px;
+margin:20px auto;
+line-height:1.8;
+color:#444;
+font-size:0.95rem;
+}
+
+.cv-btn{
+display:inline-block;
+padding:15px 40px;
+background:linear-gradient(
+135deg,
+var(--accent),
+var(--accent2)
+);
+
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:600;
+margin-top:20px;
+margin-bottom:35px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transition:0.3s;
+}
+
+.cv-btn:hover{
+transform:translateY(-3px);
+}
+
+.divider{
+height:4px;
+width:60px;
+background:linear-gradient(
+90deg,
+var(--accent),
+var(--accent2)
+);
+
+margin:20px auto 30px;
+border-radius:10px;
+}
+
+.section-title{
+font-size:1.5rem;
+margin-bottom:20px;
+color:#333;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-bottom:35px;
+}
+
+.project{
+background:rgba(255,255,255,0.65);
+padding:18px;
+border-radius:18px;
+font-weight:600;
+color:#333;
+backdrop-filter:blur(5px);
+}
+
+.project small{
+display:block;
+margin-top:8px;
+font-weight:400;
+color:#555;
+}
+
+.social-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+
+.social-btn{
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:20px;
+background:rgba(255,255,255,0.7);
+border-radius:18px;
+text-decoration:none;
+font-weight:600;
+color:#333;
+transition:0.3s;
+}
+
+.social-btn:hover{
+transform:translateY(-5px);
+}
+
+.social-icon{
+font-size:1.7rem;
+margin-bottom:8px;
+}
+
+.footer{
+margin-top:35px;
+color:#555;
+font-size:0.85rem;
+}
+
+@media(max-width:700px){
+
+.projects{
+grid-template-columns:1fr;
+}
+
+.social-grid{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:2rem;
+}
+
+.card{
+padding:30px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+
+<div class="card">
+
+<div class="avatar-container">
+<img src="paarth-maisuria.jpg" alt="Paarth Maisuria" class="avatar"
+onerror="this.style.display='none'; this.parentNode.textContent='PM';">
+</div>
+
+<h1>Paarth Maisuria</h1>
+
+<p class="tagline">
+• Software Engineering Student
+</p>
+
+<p class="about">
+Second-year Bachelor of Science in Information Technology student specialising in Software Engineering at Eduvos. Passionate about software development, artificial intelligence, cloud computing, cybersecurity, networking, mobile development, and database technologies. Gained hands-on experience through the CAPACITI AI Programme and the Eduvos HackJam, and continue to build practical solutions through my academic projects.
+</p>
+
+<a href="Paarth_Maisuria_CV.pdf" target="_blank" class="cv-btn">
+📄 View My CV
+</a>
+
+<div class="divider"></div>
+
+<h2 class="section-title">Featured Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+Student Grade Management System
+<small>Python • Tkinter • CSV</small>
+</div>
+
+<div class="project">
+Transport Cost Comparator
+<small>Android Studio • Java • SQLite</small>
+</div>
+
+<div class="project">
+Multi-Database Library Management System
+<small>Oracle SQL • MongoDB • Neo4j</small>
+</div>
+
+<div class="project">
+Enterprise Network Security Architecture
+<small>Cisco Packet Tracer</small>
+</div>
+
+<div class="project">
+Windows Server Infrastructure
+<small>Active Directory • DNS • DHCP</small>
+</div>
+
+<div class="project">
+AWS Cloud Infrastructure
+<small>EC2 • VPC • Security Groups</small>
+</div>
+
+</div>
+
+<div class="social-grid">
+
+<a href="https://www.linkedin.com/in/paarth-maisuria/?isSelfProfile=true" target="_blank" class="social-btn">
+<span class="social-icon">🔗 in</span>
+LinkedIn
+</a>
+
+<a href="https://github.com/P-a-a-r-t-h-M" target="_blank" class="social-btn">
+<span class="social-icon">👾</span>
+GitHub
+</a>
+
+<a href="mailto:paarthmaisuria101@gmail.com" class="social-btn">
+<span class="social-icon">✉️</span>
+Email
+</a>
+
+</div>
+
+<div class="footer">
+© 2026 Paarth Maisuria
+</div>
+
+</div>
+
+</body>
+
+</html>
